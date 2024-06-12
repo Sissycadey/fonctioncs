@@ -1,0 +1,42 @@
+Console.WriteLine("Entrez le premier nombre decimal: ");
+float premierNombre = (float)Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Entrez le deuxième decimal: ");
+float deuxiemeNombre = (float)Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Choisissez un opérateur add, sustract, multiply, modulo ou divide ");
+string? userEntryOperator = Console.ReadLine();
+
+// int nombreEntier1 = (int) Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("");
+
+// int nombreEntier2 = (int) Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("");
+
+float res;
+if(userEntryOperator == "add"){
+     res = premierNombre+deuxiemeNombre;
+    Console.WriteLine($"{premierNombre} + {deuxiemeNombre} = {res}");
+}
+else if(userEntryOperator == "sustract"){
+     res = premierNombre-deuxiemeNombre;
+    Console.WriteLine($"{premierNombre} - {deuxiemeNombre} = {res}");
+}
+
+else if(userEntryOperator == "multiply"){
+     res = premierNombre*deuxiemeNombre;
+    Console.WriteLine($"{premierNombre} * {deuxiemeNombre} = {res}");
+}
+else if(userEntryOperator == "divide"){
+     res = premierNombre/deuxiemeNombre;
+    Console.WriteLine($"{premierNombre} / {deuxiemeNombre} = {res}");
+}
+
+else if(userEntryOperator == "modulo"){
+    int res1 =  (int)premierNombre%(int)deuxiemeNombre; //nombreEntier1%nombreEntier2;
+    Console.WriteLine($"{premierNombre} % {deuxiemeNombre} = {res1}");
+}
+else{
+    Console.WriteLine("operation undefined");
+
+}
